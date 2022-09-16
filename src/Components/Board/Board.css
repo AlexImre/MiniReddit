@@ -8,3 +8,14 @@
     padding: 10px;
     margin: 20px;
 }
+
+.fa-solid {
+    color: orangered;
+    margin-right: 5px;
+}
+
+.boardTopBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

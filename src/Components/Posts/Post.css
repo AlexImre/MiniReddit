@@ -1,0 +1,23 @@
+.postContainer {
+    width: 600px;
+    border: 1px solid black;
+    margin: 15px;
+    box-shadow: 2px 2px #888888;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.postSubreddit {
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+.postUpvotes {
+    color: orangered;
+}
+
+.postComments {
+    color: orangered;
+    cursor: pointer;
+}
