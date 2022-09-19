@@ -5,11 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getPosts, selectData } from '../Posts/PostsSlice';
 import { store } from '../../Store';
 
-
-
-
-
-
 export function Board() {
 
   const dispatch = useDispatch();
@@ -39,7 +34,7 @@ export function Board() {
     <div className='boardContainer'>
       <div className='boardWrapper'>
         <div className='boardTopBar'>
-          <button className='boardTopBarButton' value='best.json' onClick={getRedditData}><i className="fa-solid fa-rocket"></i> Best</button>
+          {/* CHANGE BUTTONS SO THEY ARENT HARD CODED, GRAB LOCATION */}
           <button className='boardTopBarButton' value='hot.json' onClick={getRedditData}><i className="fa-solid fa-fire"></i> Hot</button>
           <button className='boardTopBarButton' value='new.json' onClick={getRedditData}><i className="fa-solid fa-tag"></i> New</button>
           <button className='boardTopBarButton' value='top.json' onClick={getRedditData}><i className="fa-solid fa-trophy"></i> Top</button>

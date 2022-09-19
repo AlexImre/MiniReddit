@@ -8,6 +8,7 @@ import til from '../../Images/til.png';
 import video from '../../Images/video.jpg';
 import { useDispatch } from 'react-redux';
 import { getPosts } from '../Posts/PostsSlice';
+import { Link } from 'react-router-dom';
 
 export function Sidebar() {
 
@@ -19,7 +20,7 @@ export function Sidebar() {
       Popular subreddits
     </div>
     <button className='subredditButton'><img src={funny} className='subredditLogo'/>
-      <span className="subredditLink" onClick={() => dispatch(getPosts('r/funny.json'))}>/r/funny</span>
+      <Link className="subredditLink" to="/funny" onClick={() => dispatch(getPosts('r/funny.json'))}>/r/funny</Link>
     </button>     
     <button className='subredditButton'><img src={gaming} className='subredditLogo'/>
       <span className="subredditLink" onClick={() => dispatch(getPosts('r/gaming.json'))}>/r/gaming</span>
