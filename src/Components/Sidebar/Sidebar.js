@@ -20,22 +20,22 @@ export function Sidebar() {
       Popular subreddits
     </div>
     <button className='subredditButton'><img src={funny} className='subredditLogo'/>
-      <Link className="subredditLink" to="/funny" onClick={() => dispatch(getPosts('r/funny.json'))}>/r/funny</Link>
+      <Link className="subredditLink" to="/r/funny" onClick={() => dispatch(getPosts('r/funny.json'))}>/r/funny</Link>
     </button>     
     <button className='subredditButton'><img src={gaming} className='subredditLogo'/>
-      <span className="subredditLink" onClick={() => dispatch(getPosts('r/gaming.json'))}>/r/gaming</span>
+      <Link className="subredditLink" to="/r/gaming" onClick={() => dispatch(getPosts('r/gaming.json'))}>/r/gaming</Link>
     </button>        
     <button className='subredditButton'><img src={aww} className='subredditLogo'/>
-    <span className="subredditLink" onClick={() => dispatch(getPosts('r/aww.json'))}>/r/aww</span>
+    <Link className="subredditLink" to="/r/aww" onClick={() => dispatch(getPosts('r/aww.json'))}>/r/aww</Link>
     </button>
     <button className='subredditButton'><img src={science} className='subredditLogo'/>
-    <span className="subredditLink" onClick={() => dispatch(getPosts('r/science.json'))}>/r/science</span>
+    <Link className="subredditLink" to="/r/science" onClick={() => dispatch(getPosts('r/science.json'))}>/r/science</Link>
     </button>  
     <button className='subredditButton'><img src={video} className='subredditLogo'/>
-    <span className="subredditLink" onClick={() => dispatch(getPosts('r/videos.json'))}>/r/videos</span>
+    <Link className="subredditLink" to="/r/videos" onClick={() => dispatch(getPosts('r/videos.json'))}>/r/videos</Link>
     </button>  
     <button className='subredditButton'><img src={til} className='subredditLogo'/>
-    <span className="subredditLink" onClick={() => dispatch(getPosts('r/todayilearned.json'))}>/r/todayilearned</span>
+    <Link className="subredditLink" to="/r/todayilearned" onClick={() => dispatch(getPosts('r/todayilearned.json'))}>/r/todayilearned</Link>
     </button>    
   </div>
   )

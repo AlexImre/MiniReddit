@@ -8,7 +8,7 @@ export function Navbar() {
         <Link to="/home">
           <img className='logoImage' src={require('../../Images/logo.svg').default} alt='logo'/>
         </Link>
-        <Link>
+        <Link to="/home">
           <div className='navbarTitle'>Mini Reddit</div>        
         </Link>
         <div className='navbarWrapper'>

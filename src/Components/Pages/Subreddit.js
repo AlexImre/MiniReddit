@@ -13,7 +13,7 @@ export function Subreddit() {
         <div className="SubredditContainer">
           <Navbar />
           <div className='subredditH2'>
-            <h2>{`Posts from r${useLocation().pathname}`}</h2>
+            <h2>{`Posts from ${useLocation().pathname.slice(1)}`}</h2>
           </div>
           <div className='AppWrapper'>
             <Board />

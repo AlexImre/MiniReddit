@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getPosts, selectPosts } from './PostsSlice';
-import { store, Store } from '../../Store';
+import { Link } from 'react-router-dom';
 import './Post.css';
 
 
@@ -39,7 +37,9 @@ export function Post(props) {
           {props.postHint === 'link'? <a href={props.url} className='postExternalLink' target="_blank">{props.url}<i class="fa-solid fa-arrow-up-right-from-square"></i></a> : ''}
         </div>
         <div className='postComments'>
-          Comments
+          <Link>
+            Comments
+          </Link>
         </div>
 
       </div>
