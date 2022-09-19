@@ -2,9 +2,14 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getPosts = createAsyncThunk(
     'posts/getPosts',
-    async () => {
-        console.log("fetching reddit data");
-        const response = await fetch(`https://www.reddit.com/top.json`);
+    async (path) => {
+        console.log(`fetching reddit data, and path is: ${path}`);
+        if (path === undefined) {
+            const response = await fetch(`https://www.reddit.com/hot.json`);
+            const json = await response.json();
+            return json;
+        }
+        const response = await fetch(`https://www.reddit.com/${path}`);
         const json = await response.json();
         return json;
     }

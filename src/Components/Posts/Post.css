@@ -7,17 +7,47 @@
     padding: 5px;
 }
 
-.postSubreddit {
-    font-weight: bold;
-    margin-bottom: 5px;
+.postWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.postSubreddit, .postAuthor, .postUTC {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px;
+    color:#888888
+}
+
+.postExternalLink{
+    color: blue;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.fa-arrow-up-right-from-square{
+    color: blue;
+    cursor: pointer;
+}
+
+.postTitle {
+    font-weight: bold;
 }
 
 .postUpvotes {
     color: orangered;
 }
 
+.postImage, .postVideo {
+    max-width: 600px;
+}
+
 .postComments {
     color: orangered;
     cursor: pointer;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

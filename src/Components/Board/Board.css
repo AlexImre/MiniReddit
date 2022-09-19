@@ -1,6 +1,6 @@
 .boardContainer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -18,4 +18,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: auto red;
+    width: 642px;
+}
+
+.subredditContainer{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    outline:auto;
+}
+
+.subredditButton{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 175px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.subredditLogo {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 7px;
+}
+
+.subredditSection{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 175px;
+    font-weight: bold;
+}
+
+.subredditLink {
+    cursor: pointer;
+}
+
+.subredditLink:hover {
+    text-decoration: underline;
 }
