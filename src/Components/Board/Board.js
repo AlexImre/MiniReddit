@@ -52,10 +52,13 @@ export function Board() {
               video={post.data.media}
               upvotes={post.data.ups}
               selftext={post.data.selftext}
+              id={post.data.id}
               author={post.data.author}
               created={post.data.created_utc}
               postHint={post.data.post_hint}
-              subreddit={post.data.subreddit_name_prefixed}/>) : ''}
+              subreddit={post.data.subreddit_name_prefixed}
+              showCommentsButton={true}
+              />) : ''}
         </div>
       </div>
     </div>

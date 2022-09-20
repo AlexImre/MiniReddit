@@ -1,9 +1,14 @@
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './Post.css';
+import { getComments } from '../Comments/CommentsSlice';
+import { useDispatch } from 'react-redux';
 
 
 export function Post(props) {
+
+  const id = props.id;
+  const dispatch = useDispatch();
   
   return (
     <div className='postContainer'>
@@ -37,9 +42,14 @@ export function Post(props) {
           {props.postHint === 'link'? <a href={props.url} className='postExternalLink' target="_blank">{props.url}<i class="fa-solid fa-arrow-up-right-from-square"></i></a> : ''}
         </div>
         <div className='postComments'>
-          <Link>
+          {props.showCommentsButton ? 
+          <Link to='/comments'>
             Comments
+            <button onClick={() => {dispatch(getComments(`comments/${id}.json`))}}>
+              getComments
+            </button>
           </Link>
+          : '' }
         </div>
 
       </div>

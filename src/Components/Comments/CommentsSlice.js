@@ -3,9 +3,17 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const getComments = createAsyncThunk(
     'comments/getComments',
     async (path) => {
-        const response = await fetch(`https://www.reddit.com/${path}`);
-        const json = await response.json();
-        return json;
+        console.log(`url is: https://www.reddit.com/${path}`);
+        try {
+            console.log("trying to fetch comments...");
+            const response = await fetch(`https://www.reddit.com/${path}`);
+            console.log(response);
+            const json = await response.json();
+            console.log(json);
+            return json;
+        } catch (err) {
+            console.log(`getComments failed, Error: ${err}`);
+        }
     }
 );
 
