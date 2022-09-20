@@ -5,28 +5,29 @@ import { getComments } from '../Comments/CommentsSlice';
 import { useDispatch } from 'react-redux';
 
 
+
 export function Post(props) {
 
   const id = props.id;
+  const created = props.created;
   const dispatch = useDispatch();
   
   return (
     <div className='postContainer'>
       <div className='postUpvotes'>
-        <i class="fa-solid fa-sort"></i>{props.upvotes > 1000 ? `${props.upvotes/1000}k` : props.upvotes}
+        <i class="fa-solid fa-sort postUpvotes"></i>{props.upvotes > 1000 ? `${props.upvotes/1000}k` : props.upvotes}
       </div>
       <div className='postWrapper'>
 
       <div className='postSubreddit'>
-          {props.index}, {props.subreddit}
+        {props.subreddit}
         </div>
         <div className='postAuthor'>
           {`Posted by u/${props.author}`}
         </div>
-        {/* Add date if needed? */}
-        {/* <div className='postUTC'>
-          {`at ${postDate.toDateString()}`}
-        </div> */}
+        <div className='postUTC'>
+          {created}
+        </div>
         </div>
         <div className='postTitle'>
           {props.title}
@@ -44,9 +45,8 @@ export function Post(props) {
         <div className='postComments'>
           {props.showCommentsButton ? 
           <Link to='/comments'>
-            Comments
-            <button onClick={() => {dispatch(getComments(`comments/${id}.json`))}}>
-              getComments
+            <button className='commentButton' onClick={() => {dispatch(getComments(`comments/${id}.json`))}}>
+              Comments
             </button>
           </Link>
           : '' }

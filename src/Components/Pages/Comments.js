@@ -9,6 +9,10 @@ import './Comments.css';
 export function Comments() {
 
     const comments = useSelector(selectData);
+
+    if (comments.status !== 'success'){
+        return;
+    }
     const postData = comments.data[0].data.children[0].data;
     const commentsData = comments.data[1].data.children;
     console.log(comments);
@@ -35,9 +39,15 @@ export function Comments() {
                 showCommentsButton={false}
             /> : '' }
           <div className='commentsWrapper'>
+            <div className='commentsHeader'>
+                Comments
+            </div>
             <div className='commentsComments'>
                 {comments.status === 'success'? commentsData.map((comment, index) => <Comment 
                     key={index}
+                    author={comment.data.author}
+                    created={comment.data.created}
+                    ups={comment.data.ups}
                     body={comment.data.body}
                 /> ) : ''}
             </div>

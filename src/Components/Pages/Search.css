@@ -1,0 +1,11 @@
+.searchTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 25px;
+    text-decoration: none;
+    color: #007BFF;
+}

@@ -1,8 +1,8 @@
 .postContainer {
     width: 600px;
-    border: 1px solid black;
-    margin: 15px;
-    box-shadow: 2px 2px #888888;
+    border: 1px solid #007BFF;
+    margin: 0px 15px 15px 15px;
+    box-shadow: 0px 0px 5px rgb(89, 168, 221);
     border-radius: 5px;
     padding: 5px;
 }
@@ -36,7 +36,7 @@
 }
 
 .postUpvotes {
-    color: orangered;
+    color: #007BFF;
 }
 
 .postImage, .postVideo {
@@ -44,10 +44,38 @@
 }
 
 .postComments {
-    color: orangered;
+    /* color: #007BFF;
     cursor: pointer;
-    background-color: lightgrey;
+    background-color: #007bff31;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #007bff31;
+    border-radius: 5px; */
 }
+
+/* .postComments:hover {
+    border: 1px solid #007bffa6;
+    background-color: #007bffa6;
+    color: #fff;
+} */
+
+.commentButton {
+    margin: 2px 0 2px 0;
+    background-color: #007bff31;
+    border: 2px solid #007bff31;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #007BFF;
+    width: 100%;
+}
+
+.commentButton:hover {
+    background-color: #007bff86;
+    color: #fff;
+}
+
+
+

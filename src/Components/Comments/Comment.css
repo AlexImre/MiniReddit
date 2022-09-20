@@ -1,3 +1,45 @@
 .commentContainer {
     width: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex start;
+    border: 1px solid #007BFF;
+    margin: 15px;
+    box-shadow: 0px 0px 5px rgb(89, 168, 221);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.commentTopSection {
+    display: flex;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px;
+    color:#888888
+}
+
+.commentUpvoteContainer {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    min-width: 60px;
+    color: #007BFF;
+}
+
+.commentBody {
+    padding: 5px;
+}
+
+.commentsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #007BFF;
+}
+
+#commentUpVotesIcon {
+    color: #007BFF;
 }

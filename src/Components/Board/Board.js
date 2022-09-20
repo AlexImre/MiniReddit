@@ -4,10 +4,13 @@ import { Post } from '../Posts/Post';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPosts, selectData } from '../Posts/PostsSlice';
 import { store } from '../../Store';
+import { useLocation } from 'react-router-dom';
 
 export function Board() {
 
   const dispatch = useDispatch();
+  const pathName = useLocation().pathname;
+  console.log(pathName);
 
   // Get the Data from the store, this works, but should really get state using useSelector...  
   const posts = store.getState();
@@ -35,9 +38,9 @@ export function Board() {
       <div className='boardWrapper'>
         <div className='boardTopBar'>
           {/* CHANGE BUTTONS SO THEY ARENT HARD CODED, GRAB LOCATION */}
-          <button className='boardTopBarButton' value='hot.json' onClick={getRedditData}><i className="fa-solid fa-fire"></i> Hot</button>
-          <button className='boardTopBarButton' value='new.json' onClick={getRedditData}><i className="fa-solid fa-tag"></i> New</button>
-          <button className='boardTopBarButton' value='top.json' onClick={getRedditData}><i className="fa-solid fa-trophy"></i> Top</button>
+          {pathName === '/home' ? <button className='boardTopBarButton button-18' value='hot.json' onClick={getRedditData}><i className="fa-solid fa-fire"></i> Hot</button> : ''}
+          {pathName === '/home' ? <button className='boardTopBarButton button-18' value='new.json' onClick={getRedditData}><i className="fa-solid fa-tag"></i> New</button> : ''}
+          {pathName === '/home' ? <button className='boardTopBarButton button-18' value='top.json' onClick={getRedditData}><i className="fa-solid fa-trophy"></i> Top</button> : ''}
         </div>
         <div className='boardPostsContainer'>
           {/* If data has been fetched successfully, create posts */}

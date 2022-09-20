@@ -1,5 +1,6 @@
 .navbarContainer {
-    background-color: rgb(200, 222, 236);
+    /* background-color: rgb(154, 204, 235); */
+    background-color: #007bff59;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -11,14 +12,43 @@
 }
 
 .navbarTitle {
-    width: 100px;
+    width: 200px;
     margin: 10px;
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 35px;
+    text-decoration: none;
 }
 
 .navbarWrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
+    margin-left: 30px;
 }
 
+#title {
+    text-decoration: none;
+}
+
+.titleLeft {
+    font-weight: 100;
+    color: #fff;
+}
+
+.titleRight {
+    color: #007BFF;
+}
+
+.search {
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    border: 1px solid #007BFF;
+}
+
+.search:focus {
+    border: 3px solid #007BFF;
+  }
