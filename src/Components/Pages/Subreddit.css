@@ -1,6 +1,45 @@
+.subredditMasterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .subredditH2 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     color: #007BFF;
+    margin: 10px 0 10px 0;
+}
+
+.subredditTitle {
+    margin: 5px 0 5px 0;
+}
+
+.subredditTitleTop {
+    font-family: 'poppins';
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.subredditTitleBottom {
+    font-family: 'poppins';
+    font-size: 15px;
+    font-weight: 400;
+    color: #888;
+}
+
+.subredditWrapper {
+    width: fit-content;
+}
+
+.subredditBreak {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.subredditLogo {
+    border-radius: 50%;
+    width: 55px;
+    margin: 7px 12px 7px 7px;
 }

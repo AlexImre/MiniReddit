@@ -5,6 +5,7 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getPosts } from '../Posts/PostsSlice';
+import { Topbar } from '../Topbar/Topbar';
 
 export function Home() {
 
@@ -20,8 +21,9 @@ export function Home() {
     },[pathNameForSearch])
 
     return (
-        <div className="AppContainer" id="home">
+        <div className="AppContainer">
           <Navbar />
+          <Topbar />
           <div className='AppWrapper'>
             <Board />
             <Sidebar />

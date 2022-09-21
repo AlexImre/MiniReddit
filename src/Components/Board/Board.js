@@ -36,16 +36,6 @@ export function Board() {
     <div className='boardMaster'>
     <div className='boardContainer'>
       <div className='boardWrapper'>
-        <div className='boardTopBar'>
-          {/* CHANGE BUTTONS SO THEY ARENT HARD CODED, GRAB LOCATION */}
-          {/* If pathname has h to start i.e. Home, show buttons */}
-            {pathName[1] === 'h' ? <button className='boardTopBarButton button-18' value='hot.json' onClick={getRedditData}><i className="fa-solid fa-fire"></i> Hot</button> : ''}
-            {pathName[1] === 'h' ? <button className='boardTopBarButton button-18' value='new.json' onClick={getRedditData}><i className="fa-solid fa-tag"></i> New</button> : ''}
-            {pathName[1] === 'h' ? <button className='boardTopBarButton button-18' value='top.json' onClick={getRedditData}><i className="fa-solid fa-trophy"></i> Top</button> : ''}
-
-
-
-        </div>
         <div className='boardPostsContainer'>
           {/* If data has been fetched successfully, create posts */}
           {data.status === 'success' ? posts.posts.data.data.children.map((post, index) => 

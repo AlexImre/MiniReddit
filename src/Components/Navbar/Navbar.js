@@ -19,7 +19,7 @@ export function Navbar() {
   const submitSearch = (e) => {
     e.preventDefault();
     if (search.length > 0) {
-      navigate('/search');
+      navigate(`/search/${search}`);
       dispatch(getPosts(`search.json?q=${search}`));
     }
   }

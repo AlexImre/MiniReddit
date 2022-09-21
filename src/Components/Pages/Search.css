@@ -1,6 +1,12 @@
-.searchTitle {
+.searchMasterContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.searchTitle {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     margin: 10px;
     font-family: 'Poppins';
@@ -8,4 +14,14 @@
     font-size: 25px;
     text-decoration: none;
     color: #007BFF;
+}
+
+.searchContainer {
+    width:fit-content;
+}
+
+.fa-magnifying-glass {
+    color: #007BFF;
+    font-size: 35px;
+    margin: 10px;
 }

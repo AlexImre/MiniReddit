@@ -1,0 +1,14 @@
+.topbarWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins';
+}
+
+.boardTopBarButton {
+    text-decoration: none;
+}
+
+.topbarLinks {
+    text-decoration: none;
+}

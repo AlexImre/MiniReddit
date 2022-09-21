@@ -14,9 +14,9 @@ function App() {
       <Routes>
         <Route path="/comments" element={<Comments />} />
       </Routes>
-      <Routes>
+      {/* <Routes>
         <Route path="/search" element={<Search />} />
-      </Routes>
+      </Routes> */}
       <Routes>
         <Route path="/search/:query" element={<Search />} />
       </Routes>
