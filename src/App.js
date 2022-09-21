@@ -8,6 +8,7 @@ import { Search } from './Components/Pages/Search';
 function App() {
   return (
     <Router>
+      {/* basename={process.env.PUBLIC_URL} */}
       <Routes>
         <Route path="/home/:popular" element={<Home />} />
       </Routes>
