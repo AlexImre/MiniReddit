@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Board } from '../Board/Board';
 import { Navbar } from '../Navbar/Navbar';
@@ -11,16 +11,22 @@ import { selectData } from '../Posts/PostsSlice';
 
 export function Subreddit() {
 
+  const dispatch = useDispatch();
   const getData = useSelector(selectData);
-  const subscribers = getData.data.data.children[0].data.subreddit_subscribers
   const location = useLocation();
   const pathName = location.pathname;
   const pathNameForSearch = pathName.slice(1);
-  const dispatch = useDispatch();
+
+  // dispatch(getPosts(`${pathNameForSearch}.json`));
   
   useEffect(() => {
     dispatch(getPosts(`${pathNameForSearch}.json`));
   },[pathNameForSearch])
+
+  let subscribers = 0;
+  if (getData.status === 'success') {
+    subscribers = getData.data.data.children[0].data.subreddit_subscribers;
+  }
 
   return (
       <>
@@ -28,7 +34,7 @@ export function Subreddit() {
         <div className='subredditMasterContainer'>
         <div className='subredditWrapper'>
         <div className='subredditH2'>
-          <img className='subredditLogo' src={sports} />
+          {/* <img className='subredditLogo' src={sports} /> */}
           <div className='subredditTitle'>
             <div className='subredditTitleTop'>{`Posts from ${pathName.slice(1)}`}</div>
             <div className='subredditTitleBottom'>Subscribers: {subscribers > 1000000 ? `${(subscribers/1000000).toFixed(1)}m` : subscribers > 1000 ? `${(subscribers/1000).toFixed(1)}k` : subscribers}</div>
