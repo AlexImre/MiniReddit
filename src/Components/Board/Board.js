@@ -38,6 +38,7 @@ export function Board() {
       <div className='boardWrapper'>
         <div className='boardPostsContainer'>
           {/* If data has been fetched successfully, create posts */}
+          {data.status === 'loading' ? <div className='boardLoading'>Loading data... Hang in there!</div> : ''}
           {data.status === 'success' ? posts.posts.data.data.children.map((post, index) => 
             <Post 
               key={index} 

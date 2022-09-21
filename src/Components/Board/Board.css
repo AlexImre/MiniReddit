@@ -71,3 +71,14 @@
 .postUpvotes {
     color: #007BFF;
 }
+
+.boardLoading {
+  width: 642px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: orangered;
+  font-family: 'poppins';
+  font-weight: 400;
+  font-size: 20px;
+}

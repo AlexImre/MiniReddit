@@ -10,6 +10,7 @@ export function Post(props) {
 
   const id = props.id;
   const created = props.created;
+  const dateCreated = new Date(created * 1000);
   const dispatch = useDispatch();
   
   return (
@@ -23,10 +24,10 @@ export function Post(props) {
         {props.subreddit}
         </div>
         <div className='postAuthor'>
-          {`Posted by u/${props.author}`}
+          {`Posted by `}<a className='postUserLink' href={`https://www.reddit.com/user/${props.author}`} target='_blank'>{`u/${props.author}`}</a>
         </div>
         <div className='postUTC'>
-          {created}
+          {`${dateCreated.toLocaleString().slice(0,-3)}`}
         </div>
         </div>
         <div className='postTitle'>

@@ -13,8 +13,8 @@
 
 .commentTopSection {
     display: flex;
+    align-items: center;
     margin-right: 15px;
-    font-weight: bold;
     font-size: 12px;
     padding: 5px;
     color:#888888
@@ -23,7 +23,7 @@
 .commentUpvoteContainer {
     display: flex;
     /* flex-direction: column; */
-    align-items: center;
+    align-items: baseline;
     min-width: 60px;
     color: #007BFF;
 }
@@ -43,4 +43,17 @@
 
 #commentUpVotesIcon {
     color: #007BFF;
+}
+
+.commentUserLink {
+    color:#888888;
+    text-decoration: none;
+    font-family: 'poppins';
+    font-size: 10px;
+    font-weight: 400;
+    margin-right: 7px;
+}
+
+.commentUserLink:hover {
+    text-decoration: underline;
 }

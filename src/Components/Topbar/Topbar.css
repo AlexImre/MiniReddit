@@ -1,8 +1,9 @@
 .topbarWrapper {
+    position:relative;
     display: flex;
+    font-family: 'poppins';
     justify-content: center;
     align-items: center;
-    font-family: 'poppins';
 }
 
 .boardTopBarButton {

@@ -36,7 +36,8 @@ export function Navbar() {
             <div className='navbarSearch'>
               <form onSubmit={submitSearch}>
                     {/* <i class="fa-solid fa-magnifying-glass"></i> */}
-                    <input className='search' type='search' placeholder='Search Reddit' onChange={(e) => getSearchData(e)}></input>
+                    <input className='search' type='search' placeholder="Search..." onChange={(e) => getSearchData(e)}></input>
+
                 </form>
             </div>
         </div>
