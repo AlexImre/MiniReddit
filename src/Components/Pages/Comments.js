@@ -3,10 +3,16 @@ import { Navbar } from '../Navbar/Navbar';
 import { useSelector } from 'react-redux';
 import { selectData } from '../Comments/CommentsSlice';
 import { Comment } from '../Comments/Comment';
+import { useNavigate } from 'react-router-dom';
 import { Post } from '../Posts/Post';
 import './Comments.css';
 
 export function Comments() {
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
 
     const comments = useSelector(selectData);
 
@@ -22,7 +28,7 @@ export function Comments() {
         <>
         <Navbar />
         <div className="commentsContainer">
-            BACK BUTTON
+            <button onClick={goBack}>BACK BUTTON</button>
             {comments.status === 'success'? <Post 
                 title={postData.title} 
                 text={''}

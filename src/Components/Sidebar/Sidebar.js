@@ -20,7 +20,7 @@ export function Sidebar() {
       Popular subreddits
     </div>
     <button className='subredditButton'><img src={funny} className='subredditLogo'/>
-      <Link className="subredditLink" to="/r/funny" onClick={() => dispatch(getPosts('r/funny.json'))}>/r/funny</Link>
+      <Link className="subredditLink" to="/r/funny">/r/funny</Link>
     </button>     
     <button className='subredditButton'><img src={gaming} className='subredditLogo'/>
       <Link className="subredditLink" to="/r/gaming" onClick={() => dispatch(getPosts('r/gaming.json'))}>/r/gaming</Link>

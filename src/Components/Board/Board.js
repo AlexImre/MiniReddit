@@ -26,9 +26,9 @@ export function Board() {
 
 
   // fetch data and re-render only once
-  useEffect(() => {
-  dispatch(getPosts());
-  },[dispatch])
+  // useEffect(() => {
+  // dispatch(getPosts());
+  // },[dispatch])
 
   console.log(data);
 
