@@ -13,12 +13,10 @@ export function Subreddit() {
   const pathName = location.pathname;
   const pathNameForSearch = pathName.slice(1);
   const dispatch = useDispatch();
-  console.log(pathName);
-  console.log(`pathnameforsearchis: ${pathNameForSearch}`);
   
   useEffect(() => {
     dispatch(getPosts(`${pathNameForSearch}.json`));
-  },[])
+  },[pathNameForSearch])
 
   return (
       <div className="SubredditContainer">

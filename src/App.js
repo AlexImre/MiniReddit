@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/home/:popular" element={<Home />} />
       </Routes>
       <Routes>
         <Route path="/comments" element={<Comments />} />

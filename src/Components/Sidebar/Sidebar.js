@@ -23,19 +23,19 @@ export function Sidebar() {
       <Link className="subredditLink" to="/r/funny">/r/funny</Link>
     </button>     
     <button className='subredditButton'><img src={gaming} className='subredditLogo'/>
-      <Link className="subredditLink" to="/r/gaming" onClick={() => dispatch(getPosts('r/gaming.json'))}>/r/gaming</Link>
+      <Link className="subredditLink" to="/r/gaming">/r/gaming</Link>
     </button>        
     <button className='subredditButton'><img src={aww} className='subredditLogo'/>
-    <Link className="subredditLink" to="/r/aww" onClick={() => dispatch(getPosts('r/aww.json'))}>/r/aww</Link>
+    <Link className="subredditLink" to="/r/aww">/r/aww</Link>
     </button>
     <button className='subredditButton'><img src={science} className='subredditLogo'/>
-    <Link className="subredditLink" to="/r/science" onClick={() => dispatch(getPosts('r/science.json'))}>/r/science</Link>
+    <Link className="subredditLink" to="/r/science">/r/science</Link>
     </button>  
     <button className='subredditButton'><img src={video} className='subredditLogo'/>
-    <Link className="subredditLink" to="/r/videos" onClick={() => dispatch(getPosts('r/videos.json'))}>/r/videos</Link>
+    <Link className="subredditLink" to="/r/videos">/r/videos</Link>
     </button>  
     <button className='subredditButton'><img src={til} className='subredditLogo'/>
-    <Link className="subredditLink" to="/r/todayilearned" onClick={() => dispatch(getPosts('r/todayilearned.json'))}>/r/todayilearned</Link>
+    <Link className="subredditLink" to="/r/todayilearned">/r/todayilearned</Link>
     </button>    
   </div>
   )

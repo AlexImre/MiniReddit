@@ -28,7 +28,7 @@ export function Comments() {
         <>
         <Navbar />
         <div className="commentsContainer">
-            <button onClick={goBack}>BACK BUTTON</button>
+            <button className='button-18 backbutton' onClick={goBack}>Back to Posts</button>
             {comments.status === 'success'? <Post 
                 title={postData.title} 
                 text={''}

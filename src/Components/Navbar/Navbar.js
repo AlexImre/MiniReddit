@@ -18,16 +18,18 @@ export function Navbar() {
   const navigate = useNavigate();
   const submitSearch = (e) => {
     e.preventDefault();
-    navigate('/search');
-    dispatch(getPosts(`search.json?q=${search}`));
+    if (search.length > 0) {
+      navigate('/search');
+      dispatch(getPosts(`search.json?q=${search}`));
+    }
   }
 
   return (
     <div className='navbarContainer'>
-        <Link to="/home">
+        <Link to="/home/hot">
           <img className='logoImage' src={require('../../Images/logo.svg').default} alt='logo'/>
         </Link>
-        <Link id='title' to="/home">
+        <Link id='title' to="/home/hot">
           <div className='navbarTitle'><span className='titleLeft'>Mini</span><span className='titleRight'>Reddit</span></div>        
         </Link>
         <div className='navbarWrapper'>
