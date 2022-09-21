@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Board } from '../Board/Board';
 import { Navbar } from '../Navbar/Navbar';
@@ -6,7 +6,6 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import { useLocation } from 'react-router-dom';
 import './Subreddit.css';
 import { getPosts } from '../Posts/PostsSlice';
-import sports from '../../Images/sports.png';
 import { selectData } from '../Posts/PostsSlice';
 
 export function Subreddit() {
@@ -21,7 +20,7 @@ export function Subreddit() {
   
   useEffect(() => {
     dispatch(getPosts(`${pathNameForSearch}.json`));
-  },[pathNameForSearch])
+  },[dispatch, pathNameForSearch])
 
   let subscribers = 0;
   if (getData.status === 'success') {

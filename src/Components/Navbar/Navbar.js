@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { getPosts, selectData } from '../Posts/PostsSlice';
+import { useDispatch } from 'react-redux';
+import { getPosts } from '../Posts/PostsSlice';
 
 export function Navbar() {
 

@@ -1,34 +1,18 @@
-import React, { useState, useEffect } from 'react';
 import './Board.css';
 import { Post } from '../Posts/Post';
-import { useDispatch, useSelector } from 'react-redux';
-import { getPosts, selectData } from '../Posts/PostsSlice';
+import { useSelector } from 'react-redux';
+import { selectData } from '../Posts/PostsSlice';
 import { store } from '../../Store';
 import { useLocation } from 'react-router-dom';
 
 export function Board() {
 
-  const dispatch = useDispatch();
   const pathName = useLocation().pathname;
   console.log(pathName);
 
   // Get the Data from the store, this works, but should really get state using useSelector...  
   const posts = store.getState();
   const data = useSelector(selectData);
-
-  // Display Best / Hot / New / Top subreddits
-  const getRedditData = (e) => {
-    e.preventDefault();
-    let path = e.target.value;
-    console.log(`path is: ${path}`);
-    dispatch(getPosts(path));
-  }
-
-
-  // fetch data and re-render only once
-  // useEffect(() => {
-  // dispatch(getPosts());
-  // },[dispatch])
 
   console.log(data);
 

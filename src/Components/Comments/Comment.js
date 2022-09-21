@@ -15,7 +15,7 @@ export function Comment(props) {
             {props.ups > 1000 ? `${(props.ups/1000).toFixed(1)}k` : props.ups}
           </div>
           <div className='commentTopSection'>
-          <a className='commentUserLink' href={`https://www.reddit.com/user/${props.author}`} target='_blank'>{`u/${props.author}`}</a> {`commented on ${dateCreated.toLocaleString().slice(0,-3)}`}
+          <a className='commentUserLink' href={`https://www.reddit.com/user/${props.author}`} target='_blank' rel='noreferrer'>{`u/${props.author}`}</a> {`commented on ${dateCreated.toLocaleString().slice(0,-3)}`}
         </div>
         </div>
 

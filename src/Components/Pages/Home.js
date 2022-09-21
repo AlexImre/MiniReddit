@@ -18,7 +18,7 @@ export function Home() {
     
     useEffect(() => {
       dispatch(getPosts(`${pathNameForSearch}.json`));
-    },[pathNameForSearch])
+    },[dispatch, pathNameForSearch]);
 
     return (
         <div className="AppContainer">

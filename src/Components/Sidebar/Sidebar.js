@@ -11,50 +11,46 @@ import bestof from '../../Images/bestof.png';
 import chess from '../../Images/chess.png';
 import oddlysatisfying from '../../Images/oddlysatisfying.png';
 import sports from '../../Images/sports.png';
-import { useDispatch } from 'react-redux';
-import { getPosts } from '../Posts/PostsSlice';
 import { Link } from 'react-router-dom';
 
 export function Sidebar() {
-
-  const dispatch = useDispatch();
 
   return (
     <div className='subredditContainer'>
     <div  className='sidebarTitle'>
       Popular subreddits
     </div>
-    <button className='subredditButton'><img src={sports} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={sports} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/sports">/r/sports</Link>
     </button> 
-    <button className='subredditButton'><img src={funny} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={funny} className='sidebarLogo' alt='subreddit logo'/>
       <Link className="subredditLink" to="/r/funny">/r/funny</Link>
     </button>     
-    <button className='subredditButton'><img src={gaming} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={gaming} className='sidebarLogo' alt='subreddit logo'/>
       <Link className="subredditLink" to="/r/gaming">/r/gaming</Link>
     </button>        
-    <button className='subredditButton'><img src={aww} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={aww} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/aww">/r/aww</Link>
     </button>
-    <button className='subredditButton'><img src={science} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={science} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/science">/r/science</Link>
     </button>  
-    <button className='subredditButton'><img src={video} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={video} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/videos">/r/videos</Link>
     </button>  
-    <button className='subredditButton'><img src={til} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={til} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/todayilearned">/r/todayilearned</Link>
     </button>
-    <button className='subredditButton'><img src={chess} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={chess} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/chess">/r/chess</Link>
     </button> 
-    <button className='subredditButton'><img src={cats} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={cats} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/cats">/r/cats</Link>
     </button> 
-    <button className='subredditButton'><img src={bestof} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={bestof} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/bestof">/r/bestof</Link>
     </button> 
-    <button className='subredditButton'><img src={oddlysatisfying} className='sidebarLogo'/>
+    <button className='subredditButton'><img src={oddlysatisfying} className='sidebarLogo' alt='subreddit logo'/>
     <Link className="subredditLink" to="/r/oddlysatisfying">/r/oddlysatisfying</Link>
     </button> 
   </div>
