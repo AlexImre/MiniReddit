@@ -7,16 +7,13 @@ import { Search } from './Components/Pages/Search';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/home/:popular" element={<Home />} />
       </Routes>
       <Routes>
         <Route path="/comments" element={<Comments />} />
       </Routes>
-      {/* <Routes>
-        <Route path="/search" element={<Search />} />
-      </Routes> */}
       <Routes>
         <Route path="/search/:query" element={<Search />} />
       </Routes>
