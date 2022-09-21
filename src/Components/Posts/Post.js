@@ -16,7 +16,7 @@ export function Post(props) {
   return (
     <div className='postContainer'>
       <div className='postUpvotes'>
-        <i class="fa-solid fa-sort postUpvotes"></i>{props.upvotes > 1000 ? `${(props.upvotes/1000).toFixed(1)}k` : props.upvotes}
+        <i className="fa-solid fa-sort postUpvotes"></i>{props.upvotes > 1000 ? `${(props.upvotes/1000).toFixed(1)}k` : props.upvotes}
       </div>
       <div className='postWrapper'>
 

@@ -15,7 +15,7 @@ export function Search() {
     <div className="searchMasterContainer" id="home">
     <div className='searchContainer'>
     <div className='searchTitle'>
-      <i class="fa-solid fa-magnifying-glass"></i>Search results for "{location}" 
+      <i className="fa-solid fa-magnifying-glass"></i>Search results for "{location}" 
     </div>
     <div className='AppWrapper'>
       <Board />
