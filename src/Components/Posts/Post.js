@@ -34,14 +34,18 @@ export function Post(props) {
           {props.title}
         </div>
         <div className='postText'>
-          {props.selftext}
+          {props.selftext.length > 500? `${props.selftext.slice(0, 500)}...` : props.selftext}
         </div>
-        <div className='postText'>
+        <div className='postReadMore'>
+          <Link to='/comments' onClick={() => {dispatch(getComments(`comments/${id}.json`))}}>
+            {props.selftext.length > 500? `Read More` : ''}
+          </Link>
         </div>
         <div className='postUrl'>
           {props.isVideo ? <video className='postVideo' src={props.video.reddit_video.fallback_url} controls muted /> : ''}
           {props.postHint === 'image' ? <img className='postImage' src={props.url} alt='pulled from reddit api'/> : ''}
           {props.postHint === 'link'? <a href={props.url} className='postExternalLink' target="_blank" rel='noreferrer'>{props.url}<i class="fa-solid fa-arrow-up-right-from-square"></i></a> : ''}
+          {props.postHint === 'rich:video' ? <iframe className='postVideo' width={600} height={450} title={props.videoTitle.oembed.title} src={`https://www.youtube.com/embed/${props.url.slice(17)}`} /> : ''}
         </div>
         <div className='postComments'>
           {props.showCommentsButton ? 

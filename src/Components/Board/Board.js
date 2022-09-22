@@ -32,6 +32,9 @@ export function Board() {
               url={post.data.url}
               isVideo={post.data.is_video}
               video={post.data.media}
+              secureVideo={post.data.secure_media_embed.media_domain_url}
+              videoTitle={post.data.secure_media}
+              content={post.data.secure_media_embed.content}
               upvotes={post.data.ups}
               selftext={post.data.selftext}
               id={post.data.id}
