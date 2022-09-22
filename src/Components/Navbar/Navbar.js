@@ -26,18 +26,22 @@ export function Navbar() {
 
   return (
     <div className='navbarContainer'>
-        <Link to="/home/hot">
-          <img className='logoImage' src={require('../../Images/logo.svg').default} alt='logo'/>
-        </Link>
-        <Link id='title' to="/home/hot">
-          <div className='navbarTitle'><span className='titleLeft'>Mini</span><span className='titleRight'>Reddit</span></div>        
-        </Link>
+        <div className='navbarLogoAndTitle'>
+          <Link to="/home/hot">
+            <img className='logoImage' src={require('../../Images/logo.svg').default} alt='logo'/>
+          </Link>
+          <Link id='title' to="/home/hot">
+            <div className='navbarTitle'><span className='titleLeft'>Mini</span><span className='titleRight'>Reddit</span></div>        
+          </Link>
+        </div>
+
         <div className='navbarWrapper'>
-            <div className='navbarSearch'>
               <form onSubmit={submitSearch}>
+              <div className='navbarSearch'>
                 <input className='search' type='search' placeholder="Search..." onChange={(e) => getSearchData(e)}></input>
+              </div>
               </form>
-            </div>
+
         </div>
     </div>
   )

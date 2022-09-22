@@ -61,7 +61,15 @@
     border-radius: 4px;
 }
 
+.navbarLogoAndTitle {
+    display: flex;
+}
+
 @media screen and (max-width: 820px) {
+    .navbarContainer {
+        justify-content: space-between;
+    }
+    
     .search {
         width: 100px;
         display: flex;
@@ -70,6 +78,7 @@
 
     .navbarWrapper {
         margin-left: 0;
+        margin-right: 10px;
     }
 
     .navbarSearch {
