@@ -16,7 +16,7 @@ export function Comment(props) {
           </div>
           <div className='commentTopSection'>
           <a className='commentUserLink' href={`https://www.reddit.com/user/${props.author}`} target='_blank' rel='noreferrer'>{`u/${props.author}`}</a>
-          <a className='commentCreated'> {`commented on ${dateCreated.toLocaleString().slice(0,-3)}`}</a>
+          <span className='commentCreated'> {`commented on ${dateCreated.toLocaleString().slice(0,-3)}`}</span>
         </div>
         </div>
 
