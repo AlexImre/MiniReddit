@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getPosts } from '../Posts/PostsSlice';
 import { Topbar } from '../Topbar/Topbar';
+import './Home.css';
 
 export function Home() {
 
@@ -24,9 +25,11 @@ export function Home() {
         <div className="AppContainer">
           <Navbar />
           <Topbar />
-          <div className='AppWrapper'>
+          <div className='homeBoardComponent'>
             <Board />
+          <div className='homeSidebarComponent'>
             <Sidebar />
+          </div>
           </div>
         </div>
       );

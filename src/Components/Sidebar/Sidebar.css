@@ -11,6 +11,13 @@
     padding: 20px;
     border: 1px solid orangered;
     box-shadow: 0px 0px 5px rgba(255, 68, 0, 0.322);
+
+}
+
+@media screen and (max-width: 820px) {
+    .subredditContainer {
+        display: none;  
+    }
 }
 
 .sidebarTitle{

@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
 }
 
 .logoImage {
@@ -24,7 +25,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
     margin-left: 30px;
 }
 
@@ -59,4 +59,27 @@
     box-shadow: none;
     -webkit-appearance: none;
     border-radius: 4px;
+}
+
+@media screen and (max-width: 820px) {
+    .search {
+        width: 100px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbarWrapper {
+        margin-left: 0;
+    }
+
+    .navbarSearch {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbarTitle {
+        width: 150px;
+        margin: 10px;
+        font-size: 30px;
+    }
 }

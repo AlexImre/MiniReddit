@@ -17,10 +17,8 @@ export function Board() {
   console.log(data);
 
   return (
-    <div className='boardMaster'>
     <div className='boardContainer'>
       <div className='boardWrapper'>
-        <div className='boardPostsContainer'>
           {/* If data has been fetched successfully, create posts */}
           {data.status === 'loading' ? <div className='boardLoading'>Loading data... Hang in there!</div> : ''}
           {data.status === 'success' ? posts.posts.data.data.children.map((post, index) => 
@@ -46,7 +44,5 @@ export function Board() {
               />) : ''}
         </div>
       </div>
-    </div>
-    </div>
   )
 }

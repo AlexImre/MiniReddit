@@ -1,4 +1,3 @@
-import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { Home } from '../src/Components/Pages/Home.js';
 import { Subreddit } from '../src/Components/Pages/Subreddit';
@@ -8,7 +7,6 @@ import { Search } from './Components/Pages/Search';
 function App() {
   return (
     <Router>
-      {/* basename={process.env.PUBLIC_URL} */}
       <Routes>
         <Route path="/home/:popular" element={<Home />} />
       </Routes>
@@ -20,6 +18,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path="/r/:subreddit" element={<Subreddit />} />
+      </Routes>
+      <Routes>
+        <Route path="/home" element={<Home />} />
       </Routes>
       <Routes>
         <Route path="/" element={<Home />} />

@@ -29,8 +29,9 @@ export function Subreddit() {
 
   return (
       <>
-        <Navbar />
+
         <div className='subredditMasterContainer'>
+        <Navbar />
         <div className='subredditWrapper'>
         <div className='subredditH2'>
           {/* <img className='subredditLogo' src={sports} /> */}
@@ -41,9 +42,11 @@ export function Subreddit() {
           {/* <div className='subredditBreak'></div> */}
 
         </div>
-        <div className='AppWrapper'>
+        <div className='subredditBoardComponent'>
           <Board />
-          <Sidebar />
+          <div className='subredditSidebarComponent'>
+            <Sidebar />
+          </div>
         </div>
         </div>
       </div>
